@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/d1.css">
+    <link rel="stylesheet" href="css2/swiper.min.css">
+    <link rel="stylesheet" href="css2/certify.css">
+    <script src="js2/swiper.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="head">
+            <div class="vrview">
+                <a href=""></a>
+                <ul class="ulp">
+                    <li><a href="../index.html">寰景首页</a></li>
+                    <li><a href="">核心技术</a><i></i>
+                        <div class="content">
+                            <ol>
+                                <li><a href="a1.html">车辆精细化识别</a></li>
+                                <li><a href="a2.html">行人属性识别</a></li>
+                                <li><a href="a3.html">基于深度学习的视频数据处理</a></li>
+                                <li><a href="a4.html">视频摘要浓缩与检索</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="">产品及服务</a><i class="gaiyi"></i>
+                        <div class="content content02">
+                            <ol>
+                                <li><a href="b1.html">异构分布式视频平台</a></li>
+                                <li><a href="b2.html">智能交通大数据分析平台</a></li>
+                                <li><a href="b3.html">虚拟卡口系统</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="">解决方案</a><i></i>
+                        <div class="content content03">
+                            <ol>
+                                <li><a href="c1.html">智慧交通</a></li>
+                                <li><a href="c2.html">智慧银行</a></li>
+                                <li><a href="c3.html">公共安全</a></li>
+                                <li><a href="c4.html">行业信息化</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="">新闻动态</a><i></i>
+                        <div class="content content04">
+                            <ol>
+                                <li><a href="d1.html">寰景动态</a></li>
+                                <li><a href="">行业资讯</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="guanyuhuanjin.html">关于寰景</a></li>
+                    <li><a href="jiaruwomen.html">加入我们</a></li>
+                </ul>
+                <div class="divp">
+                <a href=""></a>
+                <div class="tbewm" ><img src="img/erweima.jpg"></div>
+            </div>
+            </div>
+        </div>
+<!-- banner -->
+        <div class="banner1">
+            <div class="hxjs">
+                <h3 class="hx-h3">新闻动态</h3>
+                <p class="hx-p1">News</p>
+            </div>
+        </div>
+<!--中间 -->
+        <div id="certify">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="img/20140722100746658.jpg" /></div>
+<div class="swiper-slide"><img src="img/20140722100746658.jpg" /></div>
+<div class="swiper-slide"><img src="img/20140722100746658.jpg" /></div>
+<div class="swiper-slide"><img src="img/20140722100746658.jpg" /></div>
+<div class="swiper-slide"><img src="img/20140722100746658.jpg" /></div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+
+<script>
+certifySwiper = new Swiper('#certify .swiper-container', {
+    watchSlidesProgress: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 5,
+    autoplay: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        //clickable :true,
+    },
+    on: {
+        progress: function(progress) {
+            for (i = 0; i < this.slides.length; i++) {
+                var slide = this.slides.eq(i);
+                var slideProgress = this.slides[i].progress;
+                modify = 1;
+                if (Math.abs(slideProgress) > 1) {
+                    modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                }
+                translate = slideProgress * modify * 260 + 'px';
+                scale = 1 - Math.abs(slideProgress) / 5;
+                zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                slide.css('zIndex', zIndex);
+                slide.css('opacity', 1);
+                if (Math.abs(slideProgress) > 3) {
+                    slide.css('opacity', 0);
+                }
+            }
+        },
+        setTransition: function(transition) {
+            for (var i = 0; i < this.slides.length; i++) {
+                var slide = this.slides.eq(i)
+                slide.transition(transition);
+            }
+
+        }
+    }
+
+})
+</script>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  底部      -->
+        <div class="foot">
+            <div class="hf">
+                <div class="wl">
+                    <div class="wla">
+                         <ul class="hf-wz">
+                            <li>
+                                <ol>
+                                    <li class="dili">核心技术</li>
+                                    <li><a href="../yinru/a1.html">车辆精细化识别</a></li>
+                                    <li><a href="">行人属性识别</a></li>
+                                    <li><a href="">视频数据处理与内容分析</a></li>
+                                    <li><a href="">视频浓缩摘要与检索</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <ol>
+                                    <li class="dili">产品及服务</li>
+                                    <li><a href="">异构分布式视频平台</a></li>
+                                    <li><a href="">智能交通大数据分析平台</a></li>
+                                    <li><a href="">虚拟卡口系统</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <ol>
+                                    <li class="dili">解决方案</li>
+                                    <li><a href="">智慧交通</a></li>
+                                    <li><a href="">智慧银行</a></li>
+                                    <li><a href="">公共安全</a></li>
+                                    <li><a href="">行业信息化</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <ol>
+                                    <li class="dili">加入我们</li>
+                                    <li><a href="">社会招聘</a></li>
+                                    <li><a href="">校园招聘</a></li>
+                                    <li><a href="">实习招聘</a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <ol>
+                                    <li class="dili">相关网站
+
+
+                                    </li>
+                                    <li><a href="">寰智股份</a></li>
+                                    <li><a href="">梦工厂创业平台</a></li>
+                                    <li><a href="">芜湖创业大街</a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <div class="di-right">
+                            <div class="erweima">
+                                <img src="img/erweima.jpg" alt="">
+                            </div>
+                            <p>关注寰景信息</p>
+                            <div class="xt">
+                                <a  class="a1" href="">新浪微博</a>
+                                <a class="a2" href="">腾讯微博</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hx">
+                        <a href="">网站首页</a>
+                        <span>|</span>
+                        <a href="">关于我们</a>
+                        <span>|</span>
+                        <a href="">加入我们</a>
+                    </div>
+                </div>
+            </div>
+            <div class="zuixiam">
+                <div class="lh">
+                    <p>?2016 VRVIEW 版权所有 寰景信息技术有限公司 皖ICP备14001780号</p>
+                    <p>电话：+86-551-65319388；+86-551-65370504；传真：+86-551-65359164；地址：安徽省合肥市黄山路616号（230088）</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
